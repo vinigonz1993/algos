@@ -4,8 +4,13 @@ class Node:
         self.next = None
 
 class LinkedList:
+
     def __init__(self):
         self.head = None
+
+    def generate_list(self, values):
+        for i in values:
+            self.append(i)
 
     def append(self, data):
         new_node = Node(data)

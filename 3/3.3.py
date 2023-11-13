@@ -17,6 +17,22 @@ class CustomStack(Stack):
 
     def push(self, item):
         pointer = 0
+        check = True
+
+        while check:
+            try:
+                if len(self.items[pointer]) < self.stack_limit:
+                    check = False
+                else:
+                    pointer += 1
+            except IndexError:
+                self.items.append([])
+                check = False
+
+        self.items[pointer].append(item)
+
+        print(self.items)
+
 
 values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 11, 22, 3, 11]
 
@@ -24,7 +40,3 @@ stack = CustomStack()
 
 for value in values:
     stack.push(value)
-
-
-# TODO
-# implement the push() method. Verify items and the pointer

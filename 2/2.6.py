@@ -3,8 +3,6 @@
 from itertools import permutations
 from linked_list import LinkedList
 
-## user python permutations to check if all elements of the linked
-## list combined are a palindrome
 
 class CustomLinkedList(LinkedList):
 

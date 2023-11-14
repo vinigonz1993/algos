@@ -4,6 +4,7 @@
 
 from linked_list import LinkedList
 
+
 class CustomLinkedList(LinkedList):
 
     def remove_duplicates(self):
@@ -21,7 +22,10 @@ class CustomLinkedList(LinkedList):
             else:
                 current.next = current.next.next
 
-initial_list = [1, 1, 1, 2, 3, 4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 8, 8, 8, 9, 9]
+
+initial_list = [
+    1, 1, 1, 2, 3, 4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 8, 8, 8, 9, 9
+]
 
 linked_list = CustomLinkedList()
 

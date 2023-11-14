@@ -1,6 +1,8 @@
-# Return Kth to Last: Implement an algorithm to find the kth to last element of a singly linked lis
+# Return Kth to Last: Implement an algorithm to find the kth to
+# last element of a singly linked lis
 
 from linked_list import LinkedList
+
 
 class CustomLinkedList(LinkedList):
 
@@ -23,7 +25,10 @@ class CustomLinkedList(LinkedList):
 
         return f'Pos #{n} is {current.data}'
 
-initial_list = [1, 1, 1, 2, 3, 4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 8, 8, 8, 9, 9]
+
+initial_list = [
+    1, 1, 1, 2, 3, 4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 8, 8, 8, 9, 9
+]
 
 linked_list = CustomLinkedList()
 

@@ -1,12 +1,14 @@
-# Animal SheltenAn animal shelter, which holds only dogs and cats, operates on a strictly "first in, first
-# out" basis. People must adopt either the "oldest" (based on arrival time) of all animals at the shelter,
-# or they can select whether they would prefer a dog or a cat (and will receive the oldest animal of
-# that type). They cannot select which specific animal they would like. Create the data structures to
-# maintain this system and implement operations such as enqueue, dequeueAny, dequeueDog,
-# and dequeueCat.You may use the built-in LinkedLis t data structure.
+# Animal SheltenAn animal shelter, which holds only dogs and cats,
+# operates on a strictly "first in, first out" basis.
+# People must adopt either the "oldest" (based on arrival time)
+# of all animals at the shelter, or they can select whether
+# they would prefer a dog or a cat (and will receive the oldest
+# animal of that type).
+# They cannot select which specific animal they would like.
 
 
 from stack import Stack
+
 
 class CustomStack(Stack):
 
@@ -23,7 +25,7 @@ class CustomStack(Stack):
             print(self.row(self.items, item))
 
     def display_dequeued(self):
-        print(f"Dequeued:")
+        print("Dequeued:")
         for item in self.items_dequeued:
             print(self.row(self.items_dequeued, item))
 
@@ -32,7 +34,7 @@ class CustomStack(Stack):
 
         while self.items:
             current_value = self.items.pop()
-            while tmp_stack and current_value["type"] == type and tmp_stack[-1]["age"] < current_value["age"]:
+            while tmp_stack and current_value["type"] == type and tmp_stack[-1]["age"] < current_value["age"]: # noqa
                 self.items.append(tmp_stack.pop())
 
             tmp_stack.append(current_value)

@@ -34,6 +34,7 @@ class MyQueue:
         print(f"Queue: {self.queue_stack}")
         print(f"Dequeue: {self.dequeue_stack}")
 
+
 queue = MyQueue()
 queue.enqueue(1)
 queue.enqueue(2)

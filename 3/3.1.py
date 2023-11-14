@@ -1,7 +1,9 @@
-# Three in One: Describe how you could use a single array to implement three stacks.
+# Three in One: Describe how you could use a single array to
+# implement three stacks.
 # Hints: #2, #12, #38, #58
 
 from stack import Stack
+
 
 class StackFromList(Stack):
 
@@ -38,10 +40,11 @@ class StackFromList(Stack):
         return self.stack_pointers[stack_num] == stack_num * self.stack_size
 
     def is_full(self, stack_num):
-        return self.stack_pointers[stack_num] == (stack_num + 1) * self.stack_size
+        return self.stack_pointers[stack_num] == (stack_num + 1) * self.stack_size # noqa
 
     def get_top_index(self, stack_num):
         return self.stack_pointers[stack_num]
+
 
 stacks = StackFromList(5)
 

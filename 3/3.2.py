@@ -1,5 +1,6 @@
-# Stack Min: How would you design a stack which, in addition to p u s h and pop, has a function m i n
-# which returns the minimum eiement? Push, p o p and m i n should ail operate in 0 ( 1 ) time.
+# Stack Min: Design a stack with push and pop functions,
+# and an additional min function that returns the minimum element.
+# Ensure that push, pop, and min all operate in O(1) time.
 
 from stack import Stack
 
@@ -25,6 +26,7 @@ class CustomStack(Stack):
 
     def max(self):
         return self.max_value
+
 
 stack = CustomStack()
 

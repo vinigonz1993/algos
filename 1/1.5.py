@@ -1,5 +1,6 @@
-# One Away: There are three types of edits that can be performed on strings: insert a character,
-# remove a character, or replace a character. Given two strings, write a function to check if they are
+# One Away: There are three types of edits that can be performed
+# on strings: insert a character, remove a character, or replace
+# a character. Given two strings, write a function to check if they are
 # one edit (or zero edits) away.
 # EXAMPLE
 # p a l e , p i e - > t r u e
@@ -14,6 +15,7 @@ string_list = [
     ('pale', 'bale', True),
     ('pale', 'bake', False)
 ]
+
 
 def check_one_away_distance(first, second):
     if abs(len(second) - len(first)) > 1:
@@ -41,9 +43,9 @@ def check_one_away_distance(first, second):
                 )
 
     print(distance)
-    # print(distance[len(first)][len(second)])
 
     return distance[len(first)][len(second)] == 1
+
 
 for strings in string_list:
     print(strings[2], check_one_away_distance(strings[0], strings[1]))
